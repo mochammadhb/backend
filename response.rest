@@ -1,0 +1,32 @@
+GET http://localhost:5000/api/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMThiMDUzM2YtODA2My00NDljLTkzMzQtNDk5ZTQ3NzhjZTMyIiwidXNlcm5hbWUiOiJtb2NoYW1tYWRoYiIsImVtYWlsIjoiaGRhbmNvd3pAZ21haWwuY29tIiwiaWF0IjoxNjYzNTc1MzE1LCJleHAiOjE2NjM1NzUzMzV9.QicHvmYmh1qc4_nX8kSvWL_AUIpAEo_feHX27NtqHLc
+###
+GET http://localhost:5000/api/v1/users/1
+
+###
+POST http://localhost:5000/api/v1/register
+Content-Type: application/json
+
+{
+    "fullname": "Mochamad Hasan Burhanudin",
+    "username": "mochammadhb",
+    "email": "hdancowz@gmail.com",
+    "phone_number": "6282233341225",
+    "password": "hasan1998",
+    "confirmPassword": "hasan1998",
+    "checkbox": true
+}
+
+###
+POST http://localhost:5000/api/v1/login
+Content-Type: application/json
+
+{
+    "username": "mochammadhb",
+    "password": "hasan1998"
+}
+
+###
+DELETE http://localhost:5000/api/v1/logout
+###
+GET http://localhost:5000/api/v1/refresh_token
